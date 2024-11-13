@@ -1,4 +1,5 @@
 #!/bin/bash
+ls
 
 # Download Terraria Server
 wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1441.zip
