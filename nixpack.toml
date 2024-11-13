@@ -1,0 +1,7 @@
+name = "terraria-server"
+
+[build]
+image = "nixpack/nixpack:latest"
+
+[run]
+command = "./start_terraria.sh"
