@@ -2,6 +2,7 @@ name = "terraria-server"
 
 [build]
 image = "nixpack/nixpack:latest"
+type = "custom"  # Use a custom environment if the app type is not automatically detected
 
 [run]
 command = "./start_terraria.sh"
