@@ -1,8 +1,16 @@
-name = "terraria-server"
+#!/bin/bash
 
-[build]
-image = "nixpack/nixpack:latest"
-type = "custom"  # Use a custom environment if the app type is not automatically detected
+# Step 1: Install necessary packages (if they are not installed)
+apt-get update && apt-get install -y wget unzip
 
-[run]
-command = "./start_terraria.sh"
+# Step 2: Download the Terraria server
+wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1441.zip -O terraria-server.zip
+
+# Step 3: Unzip the Terraria server files
+unzip terraria-server.zip -d terraria-server
+
+# Step 4: Navigate to the Terraria server directory
+cd terraria-server
+
+# Step 5: Run the Terraria server
+./TerrariaServer

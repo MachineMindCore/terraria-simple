@@ -1,22 +1,17 @@
 #!/bin/bash
-ls
 
-# Download Terraria Server
-wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1441.zip
+# Step 1: Install necessary packages (if not installed)
+apt-get update && apt-get install -y wget unzip
 
-# Check if the download was successful
-if [ $? -eq 0 ]; then
-  echo "Download successful."
-else
-  echo "Download failed."
-  exit 1
-fi
+# Step 2: Download the Terraria server
+wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1441.zip -O terraria-server.zip
 
-# Unzip the Terraria server
-unzip terraria-server-1441.zip
+# Step 3: Unzip the Terraria server files
+unzip terraria-server.zip -d terraria-server
 
-# Navigate into the extracted directory (adjust if needed)
+# Step 4: Navigate to the Terraria server directory
 cd terraria-server
 
-# Run the Terraria server
+# Step 5: Run the Terraria server
 ./TerrariaServer
+
